@@ -7,7 +7,7 @@ export default function Portfolio() {
         href="portfolio"
         title="Portfolio"
         stacks={["react"]}
-        description="Portfolio made to showcase my projects, my professional experiences and talk about myself"
+        description="Created to showcase my projects, my professional experiences and talk about myself"
         status="Development"
       />
       <ProjectCard

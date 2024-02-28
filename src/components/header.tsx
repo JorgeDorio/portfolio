@@ -30,6 +30,9 @@ export function Header() {
       <Link href="/about-me" className={linkClass("about-me")}>
         About Me
       </Link>
+      <Link href="/contact" className={linkClass("about-me")}>
+        Contact
+      </Link>
     </header>
   );
 }
