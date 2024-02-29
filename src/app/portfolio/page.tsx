@@ -6,17 +6,10 @@ export default function Portfolio() {
       <h1 className="text-center text-lg font-bold">My personal projects</h1>
       <div className="p-6 flex gap-4 flex-wrap justify-center">
         <ProjectCard
-          href="portfolio"
-          title="Portfolio"
-          stacks={["react"]}
-          description="Created to showcase my projects, my professional experiences and talk about myself"
-          status="Development"
-        />
-        <ProjectCard
-          href="warehouse"
-          title="Warehouse System"
+          href="stock-manager"
+          title="Stock Manager"
           stacks={["react", "dotnet"]}
-          description="Warehouse system where it is possible to request materials and control stock"
+          description="Inventory management and purchasing system"
           status="Prototyping"
         />
       </div>
