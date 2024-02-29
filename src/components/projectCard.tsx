@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import Link from "next/link";
 
-type Status = "Prototyping" | "Development";
+type Status = "Prototyping" | "Development" | "Done";
 
 interface IProjectCardProps {
   readonly href: string;
@@ -22,6 +22,7 @@ export function ProjectCard({
     clsx("size-2 rounded-full", {
       "bg-yellow-400": status == "Prototyping",
       "bg-blue-400": status == "Development",
+      "bg-green-400": status == "Done",
     });
 
   return (

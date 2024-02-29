@@ -27,7 +27,8 @@ const Terminal = ({ fullText }: ITerminalProps) => {
         <strong className="text-[#BD93F9]">~/dev/portfolio</strong>{" "}
         <span className="text-[#FEE75D]">
           &lt;main
-          <span className="text-[#ED4245]">●</span>&gt;
+          <span className="text-[#ED4245]">●</span>
+          &gt;
         </span>
       </div>
       <div>
