@@ -1,3 +1,5 @@
+import { CompanyCard } from "@/components/companyCard";
+
 export default function AboutMe() {
   const calculateAge = () => {
     const dateOfBirth = new Date("2022-09-01");
@@ -55,7 +57,33 @@ export default function AboutMe() {
           my theoretical knowledge at the Federal Technological University of
           Paraná
         </p>
-        {/* <h1 className="text-center text-lg font-bold">My career</h1> */}
+        <h1 className="text-center text-lg font-bold">My career</h1>
+        <section className="space-y-8">
+          <CompanyCard
+            name="Scan Brazil Consulting"
+            position="Software Developer"
+            date="March/2023 - Present"
+            frameworks="Angular / NextJs / Dotnet"
+            langs="JavaScript / Typescript / C#"
+            stack="Fullstack"
+            sector="Airline"
+            contribution="I develop fare calculation systems and operating costs related to overflights and airport taxes, dealing with massive amounts of data and the need for maximum optimization, focusing on performance, reliability and precision"
+          />
+          <CompanyCard
+            name="Voluti Pagamentos"
+            position="Software Developer"
+            date="September/2022 - March/2023"
+            frameworks="Angular / NestJs"
+            langs="JavaScript / Typescript"
+            stack="Fullstack"
+            sector="Banking / Finance"
+            contribution="I developed payment APIs focused on security and
+            reliability, where it was possible to make charges and payments in
+            different ways integrated with the central bank of Brazil. In addition
+            to building an administrative dashboard where it is possible to manage
+            user payments and accounts"
+          />
+        </section>
       </div>
     </main>
   );

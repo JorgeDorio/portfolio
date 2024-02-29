@@ -14,16 +14,16 @@ export function Header() {
     });
 
   return (
-    <header className="sm:p-6 p-6 sm:flex items-center">
+    <header className="sm:p-6 p-6 sm:flex items-center fixed top-0 w-screen bg-black">
       <Link
         href="/"
-        className="bg-white text-black p-2 rounded font-bold text-xl hidden sm:inline absolute"
+        className="bg-white text-black px-2 py-1 rounded font-bold text-xl hidden sm:inline absolute"
       >
         DORIO
       </Link>
       <nav className="sm:gap-8 flex justify-between items-center max-w-[600px] m-auto">
-        <Link href="/" className="text-gray-400 sm:hidden">
-          Home
+        <Link href="/" className="sm:hidden bg-white text-black rounded font-bold px-1 py-0.5">
+          DORIO
         </Link>
         <Link href="/portfolio" className={linkClass("portfolio")}>
           Portfolio

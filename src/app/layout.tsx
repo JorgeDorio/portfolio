@@ -19,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className + " bg-black text-white"}>
         <Header />
-        {children}
+        <div className="mt-[72px]">{children}</div>
       </body>
     </html>
   );
