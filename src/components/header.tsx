@@ -3,9 +3,11 @@
 import Link from "next/link";
 import clsx from "clsx";
 import { usePathname } from "next/navigation";
+import useDownloader from "react-use-downloader";
 
 export function Header() {
   const path = usePathname();
+  const { download } = useDownloader();
 
   const linkClass = (url: string) =>
     clsx({
@@ -22,7 +24,10 @@ export function Header() {
         DORIO
       </Link>
       <nav className="sm:gap-8 flex justify-between items-center max-w-[600px] m-auto">
-        <Link href="/" className="sm:hidden bg-white text-black rounded font-bold px-1 py-0.5">
+        <Link
+          href="/"
+          className="sm:hidden bg-white text-black rounded font-bold px-1 py-0.5"
+        >
           DORIO
         </Link>
         <Link href="/portfolio" className={linkClass("portfolio")}>
@@ -31,6 +36,12 @@ export function Header() {
         <Link href="/about-me" className={linkClass("about-me")}>
           About Me
         </Link>
+        <button
+          className="text-gray-400 hover:text-white"
+          onClick={() => download("/CV-JorgeDorio.pdf", "CV - Jorge Dorio.pdf")}
+        >
+          Curriculum
+        </button>
         <Link href="/contact" className={linkClass("contact")}>
           Contact
         </Link>
