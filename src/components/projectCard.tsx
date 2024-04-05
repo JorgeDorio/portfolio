@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import Link from "next/link";
+import { HTMLAttributeAnchorTarget } from "react";
 
 type Status = "Prototyping" | "Development" | "Done";
 
@@ -9,6 +10,7 @@ interface IProjectCardProps {
   readonly stacks: string[];
   readonly description: string;
   readonly status: Status;
+  readonly target?: HTMLAttributeAnchorTarget;
 }
 
 export function ProjectCard({
@@ -17,6 +19,7 @@ export function ProjectCard({
   stacks,
   description,
   status,
+  target = "_self",
 }: IProjectCardProps) {
   const statusClass = (status: Status) =>
     clsx("size-2 rounded-full", {
@@ -26,7 +29,7 @@ export function ProjectCard({
     });
 
   return (
-    <Link href={`portfolio/${href}`}>
+    <Link href={href} target={target}>
       <div className="border border-gray-400 rounded p-4 hover:border-white w-80 h-full flex flex-col justify-between">
         <div className="flex justify-between items-center">
           <h1 className="font-bold">{title}</h1>
