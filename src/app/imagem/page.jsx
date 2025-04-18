@@ -80,8 +80,8 @@ export default function ImageFrameComposer() {
       <input type="file" accept="image/*" onChange={handleImageUpload} />
       <canvas
         ref={canvasRef}
-        width={800}
-        height={600}
+        width={1600}
+        height={1600}
         className="border rounded shadow"
       />
       <button onClick={handleDownload} disabled={!image}>
