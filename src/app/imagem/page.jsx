@@ -71,12 +71,6 @@ export default function ImageFrameComposer() {
 
   return (
     <div className="flex flex-col items-center gap-4 p-4">
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil:opsz,wght@10..72,100..900&family=Oswald:wght@200..700&display=swap"
-        rel="stylesheet"
-      />
       <input type="file" accept="image/*" onChange={handleImageUpload} />
       <canvas
         ref={canvasRef}
